@@ -6,7 +6,6 @@ LiteLLM custom provider for Apple's on-device Foundation Models (macOS 26+ with 
 
 - macOS 26.0+ (Sequoia) with Apple Intelligence enabled
 - Python 3.9+
-- `pip install apple-foundation-models`
 
 ### Install
 
