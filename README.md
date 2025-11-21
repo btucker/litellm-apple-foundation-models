@@ -10,7 +10,7 @@ LiteLLM custom provider for Apple's on-device Foundation Models (macOS 26+ with 
 ### Install
 
 ```bash
-pip install -e .
+pip install litellm-apple-foundation-models
 ```
 
 Requires Python 3.9+ and `apple-foundation-models` (only available on macOS).
