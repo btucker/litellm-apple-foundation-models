@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "litellm-apple-foundation-models"
+version = "0.1.0"
+description = "LiteLLM custom provider for Apple's on-device Foundation Models"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "litellm>=1.52.0",
+    "apple-foundation-models>=0.2.0; platform_system == \"Darwin\"",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-asyncio",
+]
+
+[project.urls]
+Homepage = "https://github.com/btucker/litellm-apple-foundation-models"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/litellm_apple_foundation_models"]
