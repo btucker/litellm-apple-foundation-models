@@ -173,7 +173,9 @@ class AppleFoundationModelsCustomLLM(CustomLLM):
         )
 
 
-def register_provider(provider_name: str = "apple_foundation_models") -> AppleFoundationModelsCustomLLM:
+def register_apple_foundation_models_provider(
+    provider_name: str = "apple_foundation_models",
+) -> AppleFoundationModelsCustomLLM:
     """
     Register the custom provider with LiteLLM and return the handler instance.
     """

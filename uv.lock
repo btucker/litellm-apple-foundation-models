@@ -964,7 +964,7 @@ name = "litellm-apple-foundation-models"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
-    { name = "apple-foundation-models", marker = "sys_platform == 'darwin'" },
+    { name = "apple-foundation-models" },
     { name = "litellm" },
 ]
 
@@ -978,7 +978,7 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "apple-foundation-models", marker = "sys_platform == 'darwin'", specifier = ">=0.2.0" },
+    { name = "apple-foundation-models", specifier = ">=0.2.0" },
     { name = "litellm", specifier = ">=1.52.0" },
     { name = "pytest", marker = "extra == 'dev'" },
     { name = "pytest-asyncio", marker = "extra == 'dev'" },

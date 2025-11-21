@@ -2,7 +2,7 @@ import litellm
 
 from litellm_apple_foundation_models import (
     AppleFoundationModelsCustomLLM,
-    register_provider,
+    register_apple_foundation_models_provider,
 )
 
 
@@ -10,7 +10,7 @@ def test_register_provider_adds_custom_handler():
     prev_map = list(getattr(litellm, "custom_provider_map", []))
     prev_custom_providers = list(getattr(litellm, "_custom_providers", []))
     try:
-        handler = register_provider()
+        handler = register_apple_foundation_models_provider()
         assert isinstance(handler, AppleFoundationModelsCustomLLM)
         assert any(
             entry.get("provider") == "apple_foundation_models"

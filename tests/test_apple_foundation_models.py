@@ -19,7 +19,9 @@ from pydantic import BaseModel
 
 import litellm_apple_foundation_models.chat.transformation
 import litellm_apple_foundation_models.common_utils
-from litellm_apple_foundation_models import register_provider
+from litellm_apple_foundation_models import (
+    register_apple_foundation_models_provider,
+)
 
 pytestmark = pytest.mark.filterwarnings("ignore:Pydantic.*")
 
@@ -40,7 +42,7 @@ def register_custom_provider():
     prev_custom_providers = list(getattr(litellm, "_custom_providers", []))
     prev_provider_list = list(getattr(litellm, "provider_list", []))
 
-    handler = register_provider()
+    handler = register_apple_foundation_models_provider()
     yield handler
 
     litellm.custom_provider_map = prev_map
